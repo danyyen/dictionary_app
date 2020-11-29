@@ -4,15 +4,12 @@ File = open("data.json")                 #OPEN THE DICTIONARY
 dataset = json.load(File)                #READ CONTENT OF DICTIONARY DATA
 
 
-
-
 def word_meaning(word):
     
     ''' 
     THIS IS A FUNCTION THAT TAKES IN WORD AND RETURNS ITS MEANING 
     
     '''
-    
     word = word.lower()
     matches = get_close_matches(word, dataset.keys(), 3, 0.5)
     
@@ -44,6 +41,7 @@ def word_meaning(word):
 
 
 def gui():
+    '''this function gives a better view of the meaning of a word'''
     n = 1
     if type(word_list) == list:
         for meaning in word_list:
